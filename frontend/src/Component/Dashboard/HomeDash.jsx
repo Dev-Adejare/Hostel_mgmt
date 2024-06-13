@@ -25,7 +25,7 @@ const HomeDash = () => {
   useEffect(() => {
     const fetchStudents = async () => {
       try {
-        const response = await axios.get("http://localhost:3500/students/");
+        const response = await axios.get("https://hostel-mgmt-bopd.vercel.app/students/");
         const students = response.data;
 
         setData(students);

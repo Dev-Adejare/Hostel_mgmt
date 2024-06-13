@@ -18,7 +18,7 @@ const AdminPreview = () => {
     setIsLoading(true);
     const fetchAdmins = async () => {
       try {
-        const response = await axios.get(`http://localhost:3500/admin/admins`);
+        const response = await axios.get(`https://hostel-mgmt-bopd.vercel.app/admin/admins`);
         setAdminData(response.data);
         console.log(response.data);
       } catch (error) {
@@ -37,7 +37,7 @@ const AdminPreview = () => {
   const handleUpdateRole = async (id, newRole) => {
     try {
       const response = await axios.patch(
-        `http://localhost:3500/admin/${id}`,
+        `https://hostel-mgmt-bopd.vercel.app/admin/${id}`,
         { role: newRole }
       );
   
@@ -58,7 +58,7 @@ const AdminPreview = () => {
   const removeUser = async (id) => {
     console.log("Removing user with id:", id); // Debugging
     try {
-      await axios.delete(`http://localhost:3500/admin/${id}`);
+      await axios.delete(`https://hostel-mgmt-bopd.vercel.app/admin/${id}`);
       setAdminData((prevData) => prevData.filter((admin) => admin._id !== id));
       setMessage("Admin deleted successfully");
     } catch (error) {

@@ -47,7 +47,7 @@ const StudentReg = () => {
       return;
     }
     axios
-    .post(`http://localhost:3500/students/registerStudent`, formData)
+    .post(`https://hostel-mgmt-bopd.vercel.app/students/registerStudent`, formData)
     .then((response) => {
       console.log(response); // Debug response
       setIsSubmitting(false);

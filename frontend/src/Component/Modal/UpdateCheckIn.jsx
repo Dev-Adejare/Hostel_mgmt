@@ -12,7 +12,7 @@ const UpdateCheckInStatus = ({ student, onClose }) => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:3500/students/checkInStatus",
+        "https://hostel-mgmt-bopd.vercel.app/students/checkInStatus",
         {
           studentId: student._id,
           action,

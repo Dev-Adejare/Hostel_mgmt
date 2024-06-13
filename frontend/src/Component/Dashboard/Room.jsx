@@ -21,7 +21,7 @@ const Room = () => {
     const fetchRoom = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3500/room/get-all-room`
+          `https://hostel-mgmt-bopd.vercel.app/room/get-all-room`
         );
 
         setRoomData(response.data);
@@ -66,7 +66,7 @@ const Room = () => {
   
   const removeRoom = async (id) => {
     try {
-      await axios.delete(`http://localhost:3500/room/delete-room/${id}`);
+      await axios.delete(`https://hostel-mgmt-bopd.vercel.app/room/delete-room/${id}`);
       setRoomData((prevRoomData) => prevRoomData.filter((room) => room._id !== id));
     } catch (error) {
       console.error("Failed to delete room", error);

@@ -19,7 +19,7 @@ const UpdateStudentProfile = ({ student, onClose }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.patch(`http://localhost:3500/students/${student._id}`, formData);
+      const response = await axios.patch(`https://hostel-mgmt-bopd.vercel.app/students/${student._id}`, formData);
       console.log(response.data); 
       onClose();
     } catch (error) {
